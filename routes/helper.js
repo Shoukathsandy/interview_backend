@@ -29,12 +29,12 @@ export async function updatemoviebyid(id, data) {
 
 export async function createuser(data) {
     return await client.db("task").
-      collection("movies").
+      collection("users").
       insertOne(data);
   }
   export async function getuserbyid(username) {
     return await client.
       db("task").
-      collection("movies").
+      collection("users").
       findOne({ username: username });
   }
